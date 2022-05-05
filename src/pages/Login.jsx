@@ -9,10 +9,27 @@ const Login = () => {
     password: "",
   });
   const navigate = useNavigate();
-  const { login } = useAuth();
+  const { login, loginGoogle, loginFacebook } = useAuth();
 
   const handleChange = ({ target: { value, name } }) => {
     setData({ ...data, [name]: value });
+  };
+
+  const iniciarSesionConGoogle = async () => {
+    try {
+      await loginGoogle();
+      navigate("/");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const iniciarSesionConFacebook = () => {
+    loginFacebook()
+      .then((res) => {
+        navigate("/");
+      })
+      .catch((error) => console.log(error));
   };
 
   const handleSubmit = async (e) => {
@@ -57,6 +74,8 @@ const Login = () => {
         />
         <button>inciar sesión</button>
       </form>
+      <button onClick={iniciarSesionConGoogle}>Ingresar con Google</button>
+      <button onClick={iniciarSesionConFacebook}>Ingrsar con Facebook</button>
     </div>
   );
 };

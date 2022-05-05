@@ -3,6 +3,9 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   onAuthStateChanged,
+  GoogleAuthProvider,
+  FacebookAuthProvider,
+  signInWithPopup,
   signOut,
 } from "firebase/auth";
 import { auth } from "../firebase";
@@ -23,6 +26,16 @@ export const AuthProvider = ({ children }) => {
     await signInWithEmailAndPassword(auth, email, password);
   };
 
+  const loginGoogle = () => {
+    const googleProvider = new GoogleAuthProvider();
+    return signInWithPopup(auth, googleProvider);
+  };
+
+  const loginFacebook = () => {
+    const facebookProvider = new FacebookAuthProvider();
+    return signInWithPopup(auth, facebookProvider);
+  };
+
   const cerrarSesion = async () => {
     await signOut(auth);
   };
@@ -36,7 +49,15 @@ export const AuthProvider = ({ children }) => {
 
   return (
     <context.Provider
-      value={{ registro, login, userState, loading, cerrarSesion }}
+      value={{
+        registro,
+        login,
+        userState,
+        loading,
+        loginGoogle,
+        loginFacebook,
+        cerrarSesion,
+      }}
     >
       {children}
     </context.Provider>
