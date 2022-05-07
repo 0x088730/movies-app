@@ -18,7 +18,7 @@ const Login = () => {
   const iniciarSesionConGoogle = async () => {
     try {
       await loginGoogle();
-      navigate("/");
+      navigate("/admin");
     } catch (error) {
       console.log(error);
     }
@@ -27,7 +27,7 @@ const Login = () => {
   const iniciarSesionConFacebook = () => {
     loginFacebook()
       .then((res) => {
-        navigate("/");
+        navigate("/admin");
       })
       .catch((error) => console.log(error));
   };
@@ -36,7 +36,7 @@ const Login = () => {
     e.preventDefault();
     try {
       await login(data.email, data.password);
-      navigate("/");
+      navigate("/admin");
     } catch (error) {
       console.log(error.code);
       if (error.code === "auth/wrong-password") {

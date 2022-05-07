@@ -1,0 +1,40 @@
+.container-carrousel-img {
+  overflow: hidden;
+  height: 50vh;
+  position: relative;
+}
+
+.container-carrousel-img img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.container-carrousel-img .buttons {
+  position: absolute;
+  left: 25px;
+  bottom: 20px;
+  display: flex;
+}
+
+.container-carrousel-img .buttons button {
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  padding: 10px 30px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+.container-carrousel-img .buttons button:first-child {
+  margin-right: 15px;
+  background: var(--primary);
+}
+
+.container-carrousel-img .buttons button:last-child {
+  background: var(--black);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}

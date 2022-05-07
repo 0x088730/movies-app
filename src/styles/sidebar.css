@@ -1,0 +1,41 @@
+span.collapse-menu-btn {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.drawer .menu {
+  background: rgba(0, 0, 0, 0.88);
+  height: 100vh;
+  z-index: -1;
+}
+
+.drawer .menu ul {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.drawer .menu ul .link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+.drawer .menu ul .link:hover {
+  color: rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid var(--primary);
+}
+
+.drawer .menu ul button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.drawer .menu ul button:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
