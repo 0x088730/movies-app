@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { NavBarAdmin } from "../../components/NavBarAdmin";
 import { fetchMovies } from "../../redux/actions/moviesAction";
+import { Movies } from "../../components/Movies";
+
 import "../../styles/movies.css";
 
 const AdminMovies = () => {
@@ -13,18 +15,13 @@ const AdminMovies = () => {
   }, []);
 
   return (
-    <div>
+    <div className="admin-movies-view">
       <NavBarAdmin />
       <h1>Peliculas</h1>
       {data.dataMovies.status === "succeded" ? (
         <div className="container-movies">
           {data.dataMovies.movies.map((movie) => (
-            <div key={movie.id} className="container-movie">
-              <img
-                src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-                alt=""
-              />
-            </div>
+            <Movies key={movie.id} movie={movie} />
           ))}
         </div>
       ) : (

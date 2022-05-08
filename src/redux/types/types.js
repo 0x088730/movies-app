@@ -8,3 +8,9 @@ export const typesStatus = {
   succeded: "succeded",
   error: "rejected",
 };
+
+export const typesStates = {
+  PENDING: "pending",
+  SUCCEDED: "succeded",
+  ERROR: "error",
+};

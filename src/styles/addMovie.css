@@ -1,0 +1,76 @@
+.container-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  width: 40%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  box-shadow: 0 0 20px 1px #fed8417e;
+}
+
+form h2 {
+  color: var(--primary);
+}
+
+form input {
+  background: none;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #fff;
+  padding: 10px;
+  color: #fff;
+  font-size: 16px;
+}
+form input:focus {
+  border-bottom: 1px solid var(--primary);
+}
+
+button.add-movie-btn {
+  padding: 15px 25px;
+  border: unset;
+  border-radius: 15px;
+  color: #212121;
+  z-index: 1;
+  background: none;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  position: relative;
+  font-weight: 1000;
+  font-size: 17px;
+
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden;
+}
+
+button.add-movie-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: var(--primary);
+  z-index: -1;
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+}
+
+button.add-movie-btn:hover {
+  color: #000;
+}
+
+button.add-movie-btn:hover::before {
+  width: 100%;
+}
+
+form .error-msg {
+  display: none;
+}
