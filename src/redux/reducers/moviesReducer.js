@@ -3,7 +3,6 @@ import { types, typesStatus } from "../types/types";
 const initial = {
   status: "idle",
   movies: [],
-  newMovie: null,
 };
 
 export const moviesReducer = (state = initial, action) => {

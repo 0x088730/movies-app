@@ -1,5 +1,11 @@
 import { types, typesStates } from "../types/types";
-import { addDoc, collection } from "firebase/firestore";
+import firebase from "firebase/app";
+import {
+  addDoc,
+  collection,
+  FieldValue,
+  serverTimestamp,
+} from "firebase/firestore";
 import { db } from "../../firebase";
 
 export const addMoviePending = () => {
@@ -20,11 +26,12 @@ export const addMovieRejected = () => {
   };
 };
 
-export const fetchAddMovie = (movie) => {
+export const fetchAddMovie = ({ ...movie }) => {
   return async (dispatch) => {
     dispatch(addMoviePending());
     try {
-      await addDoc(collection(db, "movies"), movie);
+      movie = { ...movie, created_at: serverTimestamp() };
+      await addDoc(collection(db, "peliculas"), movie);
       dispatch(addMovieSucced());
     } catch (error) {
       dispatch(addMovieRejected());

@@ -1,9 +1,13 @@
-export const Movies = ({ movie }) => {
+import { useNavigate } from "react-router-dom";
+
+export const MoviesPublic = ({ movie }) => {
+  const navigate = useNavigate();
   return (
     <div key={movie.id} className="container-movie">
       <img
         src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
         alt=""
+        onClick={() => navigate(`/movie/${movie.id}`)}
       />
       <div className="vote">
         <i className="fa-solid fa-star"></i>

@@ -1,0 +1,95 @@
+.single-movie {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.single-movie .desc-movie {
+  display: flex;
+  flex-direction: column;
+}
+
+.single-movie .desc-movie h1 {
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.single-movie .desc-movie p {
+  line-height: 140%;
+}
+
+.single-movie img {
+  margin-left: 20px;
+  height: 450px;
+  transform-style: preserve-3d;
+  transform: rotateZ(360deg) rotateY(130deg) rotateX(40deg);
+}
+
+.single-movie .vote {
+  border: 1px solid var(--primary);
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px 15px;
+  border-left-color: transparent;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 10%;
+  top: 95px;
+  left: 135px;
+  transform-style: preserve-3d;
+  transform: rotateZ(-30deg) rotateY(-300deg) rotateX(-360deg);
+}
+
+.single-movie .vote i {
+  color: var(--primary);
+  margin-right: 10px;
+}
+
+.single-movie .release-genre {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.single-movie .release-genre p {
+  color: var(--gray);
+}
+
+.single-movie .release-genre span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.single-movie .desc-movie .buttons {
+  margin-top: 40px;
+  display: flex;
+  gap: 10px;
+}
+
+.single-movie .desc-movie .buttons button {
+  flex-basis: calc(50% - 10px);
+  border: none;
+  font-size: 18px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  padding: 10px 0;
+}
+
+.single-movie .desc-movie .buttons button:first-child {
+  background: var(--primary);
+  font-weight: 500;
+}
+
+.single-movie .desc-movie .buttons button:last-child {
+  background: var(--black);
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  font-weight: 500;
+}

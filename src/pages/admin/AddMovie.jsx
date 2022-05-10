@@ -10,7 +10,6 @@ import Swal from "sweetalert2";
 import "../../styles/addMovie.css";
 
 const AddMovie = () => {
-  const [form, setForm] = useState();
   const dispatch = useDispatch();
   const { statusMovies } = useSelector((store) => store);
 

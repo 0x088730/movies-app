@@ -1,5 +1,5 @@
 import { types, typesStatus } from "../types/types";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, orderBy, query } from "firebase/firestore";
 import { db } from "../../firebase";
 
 export const moviePending = () => {
@@ -26,9 +26,15 @@ export const fetchMovies = () => {
   return async (dispatch) => {
     dispatch(moviePending());
     try {
-      const querySnapshot = await getDocs(collection(db, "movies"));
-      const movies = querySnapshot.docs.map((doc) => doc.data());
-      dispatch(movieSuccess(movies));
+      // const querySnapshot = await getDocs(collection(db, "movies"));
+      // const movies = querySnapshot.docs.map((doc) => doc.data());
+      const q = query(
+        collection(db, "peliculas"),
+        orderBy("created_at", "asc")
+      );
+      const snapshot = await getDocs(q);
+      const moviess = snapshot.docs.map((doc) => doc.data());
+      dispatch(movieSuccess(moviess));
     } catch (error) {
       dispatch(movieError(error));
     }
