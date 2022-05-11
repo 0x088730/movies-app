@@ -1,4 +1,4 @@
-import { types, typesStatus } from "../types/types";
+import { types, typesStatus, typesStates } from "../types/types";
 
 const initial = {
   status: "idle",

@@ -1,4 +1,4 @@
-import { types, typesStates } from "../types/types";
+import { typesStates } from "../types/types";
 import firebase from "firebase/app";
 import {
   addDoc,

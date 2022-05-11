@@ -1,0 +1,5 @@
+.form-edit {
+  box-shadow: none;
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+}

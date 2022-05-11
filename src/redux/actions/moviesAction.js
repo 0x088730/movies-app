@@ -26,8 +26,6 @@ export const fetchMovies = () => {
   return async (dispatch) => {
     dispatch(moviePending());
     try {
-      // const querySnapshot = await getDocs(collection(db, "movies"));
-      // const movies = querySnapshot.docs.map((doc) => doc.data());
       const q = query(
         collection(db, "peliculas"),
         orderBy("created_at", "asc")

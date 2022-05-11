@@ -26,7 +26,6 @@ const DetailMovie = () => {
           <img
             src={`https://image.tmdb.org/t/p/w500/${filterMovie.poster_path}`}
             alt=""
-            style={{}}
           />
           <div className="vote">
             <i className="fa-solid fa-star"></i>
