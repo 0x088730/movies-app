@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { Loading } from "../../components/Loading";
 import { ModalEditMovie } from "../../components/ModalEditMovie";
 import { fetchMovies } from "../../redux/actions/moviesAction";
+import { fetchDeleteMovie } from "../../redux/actions/deleteMovie";
 import Swal from "sweetalert2";
 
 import "../../styles/singleMovie.css";
@@ -15,11 +16,9 @@ const DetailMovieAdmin = () => {
   const { statusMovies } = useSelector((status) => status);
   const dispatch = useDispatch();
 
-  console.log(statusMovies.status);
-
   useEffect(() => {
     dispatch(fetchMovies());
-  }, []);
+  }, [dispatch]);
 
   const modalState = () => {
     setShow(true);
@@ -33,7 +32,6 @@ const DetailMovieAdmin = () => {
     Swal.fire({
       position: "center",
       icon: "success",
-      title: "Pelicula agregada",
       showConfirmButton: false,
       timer: 1500,
     });
@@ -52,7 +50,7 @@ const DetailMovieAdmin = () => {
           />
           <div className="vote">
             <svg
-              class="w-5 h-5 text-yellow-400 mr-1"
+              className="w-5 h-5 text-yellow-400 mr-1"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +69,6 @@ const DetailMovieAdmin = () => {
             </div>
             <div className="buttons">
               <button onClick={modalState}>Editar</button>
-              <button>Eliminar</button>
             </div>
           </div>
         </div>

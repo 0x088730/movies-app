@@ -96,3 +96,16 @@
   color: var(--primary);
   font-weight: 500;
 }
+
+.delete-movie-btn {
+  background: var(--black);
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  font-weight: 500;
+  width: 100%;
+  padding: 10px;
+}
+.delete-movie-btn:hover {
+  background: var(--primary);
+  color: var(--black);
+}

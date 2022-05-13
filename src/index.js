@@ -6,7 +6,9 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./redux/store/store";
 import "react-modern-drawer/dist/index.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+import Modal from "react-modal";
+
+Modal.setAppElement("#root");
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

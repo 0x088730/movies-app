@@ -20,7 +20,7 @@ export const Paginacion = (props) => {
   return (
     <div className="paginacion-componente">
       <p>
-        Página {props.pagina} de {props.total}:
+        Página {props.pagina} de {props.total}
       </p>
       <div className="container-paginacion">{getPaginas()}</div>
     </div>

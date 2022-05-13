@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import Carousel from "framer-motion-carousel";
 import { useSelector } from "react-redux";
 import { Loading } from "./Loading";
@@ -5,6 +6,7 @@ import "../styles/carrousel.css";
 
 export const Carrousel = () => {
   const { dataMovies } = useSelector((store) => store);
+  const navigate = useNavigate();
 
   const moviesSlice = dataMovies.movies.slice(0, 3);
 
@@ -15,16 +17,20 @@ export const Carrousel = () => {
           <Loading />
         ) : (
           moviesSlice.map((movie, i) => (
-            <div key={i} className="container-carrousel-img">
-              <div className="buttons">
-                <button>ver ahora</button>
-                <button>ver después</button>
+            <>
+              <div key={i} className="container-carrousel-img">
+                <div className="buttons">
+                  <button onClick={() => navigate(`/movie/${movie.id}`)}>
+                    ver ahora
+                  </button>
+                  <button>ver después</button>
+                </div>
+                <img
+                  src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
+                  alt=""
+                />
               </div>
-              <img
-                src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
-                alt=""
-              />
-            </div>
+            </>
           ))
         )}
       </Carousel>

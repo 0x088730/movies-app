@@ -3,3 +3,27 @@
   border: 1px solid var(--primary);
   border-radius: 4px;
 }
+
+.background {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.span-svg {
+  display: flex;
+  justify-content: space-between;
+}
+
+.close-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  justify-content: space-between;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  cursor: pointer;
+}
+
+.close-icon:hover {
+  background: var(--primary);
+  color: #000;
+}

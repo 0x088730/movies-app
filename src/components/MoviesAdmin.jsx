@@ -1,7 +1,17 @@
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchDeleteMovie } from "../redux/actions/deleteMovie";
+import { Loading } from "./Loading";
+import Swal from "sweetalert2";
+
+import "../styles/singleMovie.css";
 
 export const MoviesAdmin = ({ movie }) => {
   const navigate = useNavigate();
+  const { statusMovies } = useSelector((status) => status);
+  const dispatch = useDispatch();
+
+  if (statusMovies.status === "pending") return <Loading />;
 
   return (
     <div key={movie.id} className="container-movie">
@@ -21,6 +31,12 @@ export const MoviesAdmin = ({ movie }) => {
         </svg>
         <p>{movie.vote_average}</p>
       </div>
+      <button
+        className="delete-movie-btn"
+        onClick={() => dispatch(fetchDeleteMovie(movie.id))}
+      >
+        Eliminar
+      </button>
     </div>
   );
 };
