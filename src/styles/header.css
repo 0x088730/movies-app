@@ -39,13 +39,16 @@ header .container-search span {
   border-bottom-right-radius: 5px;
 }
 
-header .container-search span i {
+header .container-search span {
   color: var(--black);
+  display: flex;
+  justify-content: center;
 }
 
 header .container-search input {
   width: 90%;
   padding: 5px 10px;
+  color: var(--black);
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   font-size: 16px;

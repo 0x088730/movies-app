@@ -1,0 +1,152 @@
+.contenedor-form {
+  background: url("https://res.cloudinary.com/dp9zv16le/image/upload/v1652480002/sprint-3/tech-daily-PGuCnUzsRSM-unsplash_udjqos.jpg");
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.opacity-contenedor-form {
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: grid;
+  grid-template-columns: 1fr;
+  place-content: center;
+}
+
+.form-content {
+  width: 35%;
+  margin: 0 auto;
+}
+
+.form-login {
+  border: 1px solid var(--primary);
+  border-radius: 6px;
+  padding: 20px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: var(--black);
+}
+
+.form-login h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.form-login input {
+  margin: 10px 0;
+  padding: 7px;
+  background: none;
+  border: 1px solid;
+  outline: none;
+  border-radius: 6px;
+}
+
+.form-login .redirect-to {
+  margin-top: 20px;
+  text-decoration: underline;
+}
+
+.form-login button {
+  margin-top: 10px;
+  padding: 10px;
+  border: unset;
+  border-radius: 10px;
+  color: #212121;
+  z-index: 1;
+  background: none;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  position: relative;
+  font-weight: 1000;
+  font-size: 17px;
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden;
+}
+
+.form-login button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 10px;
+  background-color: var(--primary);
+  z-index: -1;
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+}
+
+.form-login button:hover {
+  color: #000;
+}
+
+.form-login button:hover::before {
+  width: 100%;
+}
+
+.login-google-facebook {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.login-google-facebook button {
+  background: var(--black);
+  border: 1px solid var(--primary);
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 6px;
+  color: var(--white);
+  transition: all linear 0.3s;
+}
+
+.login-google-facebook button:hover {
+  background: var(--primary);
+  color: var(--black);
+}
+
+.login-google-facebook button:first-child img {
+  width: 40px;
+}
+
+.login-google-facebook button:last-child {
+}
+
+.login-google-facebook button:last-child img {
+  width: 40px;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .form-content {
+    width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .form-content {
+    width: 70%;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-content {
+    width: 90%;
+  }
+  .login-google-facebook {
+    grid-template-columns: 1fr;
+  }
+  .login-google-facebook button:first-child,
+  .login-google-facebook button:last-child {
+    justify-content: center;
+  }
+}

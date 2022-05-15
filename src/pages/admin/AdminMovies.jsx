@@ -33,9 +33,9 @@ const AdminMovies = () => {
   const moviesPerPage = loadMovies();
 
   return (
-    <div className="admin-movies-view">
+    <div className="admin-movies-view px-10 py-5">
       <NavBarAdmin />
-      <h1>Peliculas</h1>
+      <h1 className="text-2xl">Peliculas</h1>
       {data.dataMovies.status === "succeded" ? (
         <>
           <div className="container-movies">

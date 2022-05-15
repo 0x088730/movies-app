@@ -8,6 +8,7 @@ export const Paginacion = (props) => {
       resultado.push(
         <a
           onClick={() => props.onChange(pagina)}
+          key={i}
           className={props.pagina === pagina ? "active-page" : "no-active-page"}
         >
           {pagina}

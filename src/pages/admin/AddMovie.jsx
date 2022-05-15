@@ -40,7 +40,7 @@ const AddMovie = () => {
   return (
     <>
       <NavBarAdmin />
-      <div className="container-form">
+      <div className="container-form-add-movie">
         <Formik
           initialValues={{
             id: "",
@@ -57,7 +57,7 @@ const AddMovie = () => {
             resetForm();
           }}
         >
-          <Form>
+          <Form className="form-add-movie">
             <h2>Añade una nueva pelicula</h2>
 
             <span style={{ color: "red" }}>

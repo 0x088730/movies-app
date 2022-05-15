@@ -11,7 +11,7 @@ export const MoviesPublic = ({ movie }) => {
       />
       <div className="vote">
         <svg
-          class="w-5 h-5 text-yellow-400 mr-1"
+          className="w-5 h-5 text-yellow-400 mr-1"
           fill="currentColor"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"

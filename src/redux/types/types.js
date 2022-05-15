@@ -14,3 +14,8 @@ export const typesStates = {
   SUCCEDED: "succeded",
   ERROR: "error",
 };
+
+export const typesValoracion = {
+  MAS_VALORADAS: "mas-valoradas",
+  MENOS_VALORADAS: "menos-valoradas",
+};

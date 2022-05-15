@@ -1,0 +1,26 @@
+.floating-icon {
+  margin: 40px;
+  transition: all linear 0.4s;
+}
+
+.list {
+  border: 1px solid var(--primary);
+  background: var(--black);
+  display: none;
+}
+
+.floating-icon img {
+  cursor: pointer;
+  box-shadow: 0px 5px 52px 20px rgba(0, 0, 0, 0.644);
+}
+
+.floating-icon:hover .list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.list .link-floating:hover {
+  color: var(--primary);
+}

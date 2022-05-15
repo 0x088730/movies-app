@@ -16,21 +16,19 @@ export const Carrousel = () => {
         {dataMovies.movies.length === 0 ? (
           <Loading />
         ) : (
-          moviesSlice.map((movie, i) => (
-            <>
-              <div key={i} className="container-carrousel-img">
-                <div className="buttons">
-                  <button onClick={() => navigate(`/movie/${movie.id}`)}>
-                    ver ahora
-                  </button>
-                  <button>ver después</button>
-                </div>
-                <img
-                  src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
-                  alt=""
-                />
+          moviesSlice.map((movie) => (
+            <div key={movie.id} className="container-carrousel-img">
+              <div className="buttons">
+                <button onClick={() => navigate(`/movie/${movie.id}`)}>
+                  ver ahora
+                </button>
+                <button>ver después</button>
               </div>
-            </>
+              <img
+                src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
+                alt=""
+              />
+            </div>
           ))
         )}
       </Carousel>

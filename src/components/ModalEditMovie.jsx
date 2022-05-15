@@ -60,88 +60,90 @@ export const ModalEditMovie = ({ show, setShow, movie }) => {
   return (
     <div className="">
       <Modal isOpen={show} className="p-2 h-screen background">
-        <form
-          className="bg-black w-6/12 mx-auto form-edit"
-          onSubmit={handleSubmit}
-        >
-          <div className="span-svg">
-            <span className="text-yellow-300 text-lg font-medium">
-              Editar Pelicula
-            </span>
-            <svg
-              className="w-6 h-6 close-icon"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-              onClick={handleClose}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M6 18L18 6M6 6l12 12"
-              ></path>
-            </svg>
-          </div>
-          <input
-            type="number"
-            placeholder="id de la pelicula"
-            name="id"
-            defaultValue={movie && movie.id}
-            disabled
-          />
-          <input
-            type="text"
-            placeholder="titulo de la pelicula"
-            name="original_title"
-            defaultValue={movie && movie.original_title}
-            onChange={handleChange}
-          />
+        <div className="container-form-add-movie">
+          <form
+            className="bg-black w-6/12 mx-auto form-edit-movie"
+            onSubmit={handleSubmit}
+          >
+            <div className="span-svg">
+              <span className="text-yellow-300 text-lg font-medium">
+                Editar Pelicula
+              </span>
+              <svg
+                className="w-6 h-6 close-icon"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                onClick={handleClose}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </div>
+            <input
+              type="number"
+              placeholder="id de la pelicula"
+              name="id"
+              defaultValue={movie && movie.id}
+              disabled
+            />
+            <input
+              type="text"
+              placeholder="titulo de la pelicula"
+              name="original_title"
+              defaultValue={movie && movie.original_title}
+              onChange={handleChange}
+            />
 
-          <input
-            type="text"
-            placeholder="descripcion de la pelicula"
-            name="overview"
-            defaultValue={movie && movie.overview}
-            onChange={handleChange}
-          />
+            <input
+              type="text"
+              placeholder="descripcion de la pelicula"
+              name="overview"
+              defaultValue={movie && movie.overview}
+              onChange={handleChange}
+            />
 
-          <input
-            type="text"
-            placeholder="url de la imagen"
-            name="poster_path"
-            defaultValue={movie && movie.poster_path}
-            onChange={handleChange}
-          />
+            <input
+              type="text"
+              placeholder="url de la imagen"
+              name="poster_path"
+              defaultValue={movie && movie.poster_path}
+              onChange={handleChange}
+            />
 
-          <input
-            type="date"
-            placeholder="fecha de lanzamiento"
-            name="release_date"
-            defaultValue={movie && movie.poster_path}
-            onChange={handleChange}
-          />
+            <input
+              type="date"
+              placeholder="fecha de lanzamiento"
+              name="release_date"
+              defaultValue={movie && movie.poster_path}
+              onChange={handleChange}
+            />
 
-          <input
-            type="text"
-            placeholder="puntuacion"
-            name="vote_average"
-            defaultValue={movie && movie.vote_average}
-            onChange={handleChange}
-          />
+            <input
+              type="text"
+              placeholder="puntuacion"
+              name="vote_average"
+              defaultValue={movie && movie.vote_average}
+              onChange={handleChange}
+            />
 
-          <input
-            type="text"
-            placeholder="genero(s)"
-            name="genre"
-            defaultValue={movie && movie.genre}
-            onChange={handleChange}
-          />
-          <button type="submit" className="add-movie-btn">
-            Editar
-          </button>
-        </form>
+            <input
+              type="text"
+              placeholder="genero(s)"
+              name="genre"
+              defaultValue={movie && movie.genre}
+              onChange={handleChange}
+            />
+            <button type="submit" className="add-movie-btn">
+              Editar
+            </button>
+          </form>
+        </div>
       </Modal>
     </div>
   );

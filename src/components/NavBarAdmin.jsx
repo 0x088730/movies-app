@@ -1,12 +1,11 @@
 import { useState } from "react";
 import Drawer from "react-modern-drawer";
 import { Link } from "react-router-dom";
-import { useAuth } from "../context/AuthContext";
 import "../styles/sidebar.css";
+import { Logout } from "./Logout";
 
 export const NavBarAdmin = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { cerrarSesion } = useAuth();
 
   const toggleDrawer = () => {
     setIsOpen((prev) => !prev);
@@ -47,7 +46,7 @@ export const NavBarAdmin = () => {
             <Link to="/admin/movies" className="link">
               Ver Peliculas
             </Link>
-            <button onClick={() => cerrarSesion()}>Cerrar sesión</button>
+            <Logout />
           </ul>
         </div>
       </Drawer>
