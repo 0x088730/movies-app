@@ -25,7 +25,7 @@
   margin-left: 20px;
   height: 450px;
   transform-style: preserve-3d;
-  transform: rotateZ(360deg) rotateY(130deg) rotateX(40deg);
+  transform: rotateZ(0deg) rotateY(140deg) rotateX(50deg);
 }
 
 .single-movie .vote {
@@ -35,7 +35,7 @@
   border-left-color: transparent;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
-  display: flex;
+  display: none;
   align-items: center;
   position: absolute;
   width: 10%;
@@ -108,4 +108,34 @@
 .delete-movie-btn:hover {
   background: var(--primary);
   color: var(--black);
+}
+
+@media (max-width: 900px) {
+  .single-movie .desc-movie .buttons {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 800px) {
+  .single-movie {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 550px) {
+  .single-movie img {
+    margin-left: 0px;
+    height: 450px;
+    transform-style: preserve-3d;
+    transform: rotateZ(0deg) rotateY(140deg) rotateX(50deg);
+  }
+}
+
+@media (max-width: 480px) {
+  .single-movie img {
+    margin-top: 20px;
+    margin-left: 0px;
+    height: 450px;
+    transform: rotateZ(0deg) rotateY(0deg) rotateX(0deg);
+  }
 }

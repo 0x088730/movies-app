@@ -73,3 +73,15 @@ button.add-movie-btn:hover::before {
 form.form-add-movie .error-msg {
   display: none;
 }
+
+@media (max-width: 860px) {
+  .container-form-add-movie form {
+    width: 60%;
+  }
+}
+
+@media (max-width: 599px) {
+  .container-form-add-movie form {
+    width: 80%;
+  }
+}

@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import MasValoradas from "./pages/MasValoradas";
 import MenosValoradas from "./pages/MenosValoradas";
 import DetailMovie from "./pages/DetailMovie";
+import Perfil from "./pages/Perfil";
 
 // login/register routes
 import Login from "./pages/Login";
@@ -67,6 +68,15 @@ function App() {
               element={
                 <ProtectedRoutes>
                   <DetailMovie />
+                </ProtectedRoutes>
+              }
+            />
+
+            <Route
+              path="/perfil"
+              element={
+                <ProtectedRoutes>
+                  <Perfil />
                 </ProtectedRoutes>
               }
             />

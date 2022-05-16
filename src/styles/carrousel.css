@@ -39,3 +39,16 @@
   color: var(--primary);
   border: 1px solid var(--primary);
 }
+
+@media (max-width: 860px) {
+  .container-carrousel-img .buttons {
+    bottom: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container-carrousel-img .buttons button {
+    padding: 10px 10px;
+    font-size: 14px;
+  }
+}

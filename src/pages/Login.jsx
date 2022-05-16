@@ -22,7 +22,7 @@ const Login = () => {
       await loginGoogle();
       navigate("/admin");
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
 

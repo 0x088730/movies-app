@@ -12,7 +12,11 @@ export const Carrousel = () => {
 
   return (
     <div className="container-carrousel">
-      <Carousel interval={5000}>
+      <Carousel
+        interval={5000}
+        renderArrowLeft={(a) => a.activeIndex}
+        renderArrowRight={(a) => a.activeIndex}
+      >
         {dataMovies.movies.length === 0 ? (
           <Loading />
         ) : (

@@ -1,6 +1,4 @@
-.form-edit {
-  box-shadow: none;
-  border: 1px solid var(--primary);
+.form-edit-movie {
   border-radius: 4px;
 }
 
@@ -78,4 +76,16 @@ button.add-movie-btn:hover::before {
 .close-icon:hover {
   background: var(--primary);
   color: #000;
+}
+
+@media (max-width: 860px) {
+  .form-edit-movie {
+    width: 60% !important;
+  }
+}
+
+@media (max-width: 599px) {
+  .form-edit-movie {
+    width: 80% !important;
+  }
 }

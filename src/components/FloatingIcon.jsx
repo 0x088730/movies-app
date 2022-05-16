@@ -13,15 +13,14 @@ export const FlaotingIcon = () => {
   if (!userState) return null;
 
   const { photoURL, email } = userState;
-  console.log(email);
 
   return createPortal(
-    <div className="floating-icon fixed z-10 bottom-0 right-0 flex flex-col items-center">
+    <div className="floating-icon fixed z-50 bottom-0 right-0 flex flex-col items-center">
       {email === "dilanespindola29@gmail.com" ? (
         <div className="list rounded-2xl text-white mb-8 p-2 img-floating">
           <NavLink to="/">
             <svg
-              class="w-6 h-6 link-floating"
+              className="w-6 h-6 link-floating"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +61,7 @@ export const FlaotingIcon = () => {
         <div className="list rounded-2xl text-white mb-8 p-2 img-floating">
           <NavLink to="/">
             <svg
-              class="w-6 h-6 link-floating"
+              className="w-6 h-6 link-floating"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"

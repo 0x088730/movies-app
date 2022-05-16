@@ -59,3 +59,37 @@ header .container-search input {
 header .container-search input:focus {
   border: 1px solid var(--primary);
 }
+
+@media (max-width: 860px) {
+  header {
+    flex-direction: column;
+  }
+
+  header ul {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  header .container-search {
+    width: 100%;
+  }
+}
+
+@media (max-width: 780px) {
+  header {
+    align-items: center;
+    justify-content: center;
+  }
+
+  header img {
+    width: 80px;
+  }
+
+  header ul {
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    margin: 20px 0;
+  }
+}

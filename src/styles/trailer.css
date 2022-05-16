@@ -1,0 +1,13 @@
+@media (max-width: 1024px) {
+  .modal-content {
+    width: 80%;
+    padding: 40px;
+  }
+}
+
+@media (max-width: 620px) {
+  .modal-content {
+    width: 90%;
+    padding: 10px;
+  }
+}

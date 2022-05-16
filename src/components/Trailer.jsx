@@ -2,12 +2,14 @@ import { useEffect, useState } from "react";
 import { getVideo } from "../services/getVideo";
 import Modal from "react-modal";
 
+import "../styles/trailer.css";
+
 export const Trailer = ({ id, showVideo, setShowVideo }) => {
   const [video, setVideo] = useState(null);
 
   useEffect(() => {
     getVideo(id).then((res) => setVideo(res));
-  }, []);
+  }, [id]);
 
   const closeModal = () => {
     setShowVideo(false);
@@ -16,9 +18,9 @@ export const Trailer = ({ id, showVideo, setShowVideo }) => {
   return (
     <Modal
       isOpen={showVideo}
-      className="mx-auto h-screen flex items-center bg-black bg-opacity-80 "
+      className="mx-auto h-screen flex items-center bg-black bg-opacity-80"
     >
-      <div className="bg-black w-7/12 mx-auto p-20 rounded-lg">
+      <div className="bg-black w-7/12 mx-auto p-20 rounded-lg modal-content">
         <svg
           className="w-6 h-6 float-right mb-5 close-icon"
           fill="none"
@@ -42,9 +44,7 @@ export const Trailer = ({ id, showVideo, setShowVideo }) => {
           />
         ) : (
           <iframe
-            className="w-full"
-            width="560"
-            height="325"
+            className="w-full h-80"
             src={`https://www.youtube.com/embed/${video.key}`}
             title="YouTube video player"
             frameBorder="0"
