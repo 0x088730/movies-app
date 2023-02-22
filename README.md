@@ -1,4 +1,4 @@
-# MOvies Web App
+# Movies Web App
 it's a web app that consumes a movies API and each movie is saved in firabase.
 You can see the most recient movies, most valued and less valued movies
 
