@@ -10,7 +10,7 @@ You must have installed...
 * [Nodejs](https://nodejs.org/en/)
 
 
-### Instalation
+### Installation
 
 Clone this repo: 
 ```
