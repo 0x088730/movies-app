@@ -13,16 +13,13 @@ You must have installed...
 ###Instalation
 
 Clone this repo: 
-```
-git clone https://github.com/dilanEspindola/movies-webapp
+```git clone https://github.com/dilanEspindola/movies-webapp
 
 install dependencies: 
-```
-npm install
+```npm install
 
 run the project: 
-```
-npm start
+```npm start
 
 ##Built in...
 * [ReactJs](https://reactjs.org/docs/getting-started.html) - Web framework
